@@ -23,7 +23,7 @@ const Signup = () => {
     e.preventDefault();
 
     try {
-      await API.post("/auth/signup", form);
+      await API.post("https://project-backend-dusky-two.vercel.app/auth/signup", form);
       toast.success("Signup successful! Please login.");
       // navigate("/login");
       navigate("/login", { replace: true });

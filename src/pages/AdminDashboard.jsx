@@ -8,9 +8,9 @@ const AdminDashboard = () => {
   const [report, setReport] = useState({});
 
   const fetchData = async () => {
-    const usersRes = await API.get("/admin/users");
-    const expensesRes = await API.get("/admin/expenses");
-    const reportRes = await API.get("/admin/report");
+    const usersRes = await API.get("https://project-backend-dusky-two.vercel.app/admin/users");
+    const expensesRes = await API.get("https://project-backend-dusky-two.vercel.app/admin/expenses");
+    const reportRes = await API.get("https://project-backend-dusky-two.vercel.app/admin/report");
 
     setUsers(usersRes.data);
     setExpenses(expensesRes.data);

@@ -22,7 +22,7 @@ const submitHandler = async (e) => {
   setLoading(true);
 
   try {
-    const { data } = await API.post("/auth/login", {
+    const { data } = await API.post("https://project-backend-dusky-two.vercel.app/auth/login", {
       email,
       password,
     });

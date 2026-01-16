@@ -5,12 +5,12 @@ const ManagerDashboard = () => {
   const [expenses, setExpenses] = useState([]);
 
   const fetchExpenses = async () => {
-    const { data } = await API.get("/expenses");
+    const { data } = await API.get("https://project-backend-dusky-two.vercel.app/expenses");
     setExpenses(data);
   };
 
   const updateStatus = async (id, status) => {
-    await API.put(`/expenses/${id}`, { status });
+    await API.put(`https://project-backend-dusky-two.vercel.app/expenses/${id}`, { status });
     fetchExpenses();
   };
 

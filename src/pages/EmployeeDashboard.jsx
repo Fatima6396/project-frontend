@@ -11,14 +11,14 @@ const EmployeeDashboard = () => {
   const [expenseDate, setExpenseDate] = useState("");
 
   const fetchExpenses = async () => {
-    const { data } = await API.get("/expenses/my");
+    const { data } = await API.get("https://project-backend-dusky-two.vercel.app/expenses/my");
     setExpenses(data);
   };
 
   const submitExpense = async (e) => {
     e.preventDefault();
 
-    await API.post("/expenses", {
+    await API.post("https://project-backend-dusky-two.vercel.app/expenses", {
       amount,
       purpose,
       expenseDate,
